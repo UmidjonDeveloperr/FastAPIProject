@@ -1,0 +1,48 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# Virtual environment
+.venv/
+venv/
+env/
+ENV/
+
+# VSCode
+.vscode/
+
+# PyCharm
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# dotenv files
+.env
+.env.*
+
+# SQLite or other local DB
+*.db
+*.sqlite3
+
+# Logs
+*.log
+
+# Migrations (if using Alembic)
+alembic/versions/*.pyc
+
+# Pytest cache
+.pytest_cache/
+
+
+# Other editor settings
+*.swp
