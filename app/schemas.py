@@ -61,7 +61,7 @@ class SingleAnswerResult(BaseModel):
 class CheckAnswersResponse(BaseModel):
     results_1_35: Dict[str, SingleAnswerResult]
     results_36_45: Dict[str, Dict[str, SingleAnswerResult]]
-    total_correct: int
+    total_correct: float
     percentage: float
 
 class MathAnswer(BaseModel):
