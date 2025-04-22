@@ -1,6 +1,7 @@
+from typing import Dict, Any
 from sympy import simplify
 from sympy.parsing.latex import parse_latex
-from typing import Dict, Any
+
 
 def is_expression_equal(user_input: str, correct_input: str) -> bool:
     try:
@@ -10,6 +11,7 @@ def is_expression_equal(user_input: str, correct_input: str) -> bool:
     except Exception as e:
         print("Error in comparison:", e)
         return False
+
 
 def check_answers(user_data: Dict[str, Any], correct_data: Dict[str, Any]) -> Dict[str, Any]:
     answers_1_35 = user_data['answers_1_35']
@@ -21,7 +23,7 @@ def check_answers(user_data: Dict[str, Any], correct_data: Dict[str, Any]) -> Di
     total_correct = 0
 
     for q, user_ans in answers_1_35.items():
-        correct = test.answers_1_35[int(q)]
+        correct = test.answers_1_35[int(q) - 1]
         is_correct = user_ans.upper() == correct.upper()
         if is_correct:
             total_correct += 1
