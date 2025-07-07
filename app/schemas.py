@@ -78,3 +78,19 @@ class SubmitAnswersRequest(BaseModel):
     answers_1_35: str
     answers_36_45: Dict[str, MathAnswer]
     submission_time: datetime
+
+
+class TestCreate(BaseModel):
+    test_id: str = Field(..., max_length=20)
+    answers_1_35: Dict[str, str]
+    answers_36_45: Dict[str, Union[str, Dict[str, str]]]
+    status: str = "inactive"
+    max_grade: int = 93
+
+
+class TestUpdate(BaseModel):
+    answers_1_35: Optional[Dict[str, str]] = None
+    answers_36_45: Optional[Dict[str, Union[str, Dict[str, str]]]] = None
+    status: Optional[str] = None
+    max_grade: Optional[int] = None
+
