@@ -9,5 +9,4 @@ antlr4-python3-runtime==4.11
 numpy
 pandas
 scipy
-numba
-warnings
+numba==0.57.1
